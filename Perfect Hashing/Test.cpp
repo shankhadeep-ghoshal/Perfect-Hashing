@@ -8,7 +8,9 @@ int main() {
 
 	
 	vector<unsigned int> array;
-	for (int i = 0; i < 10; i++)array.push_back(i + 3);
+	for (int i = 0; i < 11; i++)array.push_back(i);
+	for (int i = 55; i > 45; i--)array.push_back(i + 3);
+	for (int i = 15; i < 25; i++)array.push_back(i + 2);
 	PerfectHash p(array);
 	p.createTable();
 	int a[3];

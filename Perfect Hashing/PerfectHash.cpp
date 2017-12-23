@@ -5,8 +5,6 @@
 #include "PerfectHash.h"
 using namespace std;
 
-
-
 int PerfectHash::hashValue(int key, int a, int b, int prime, int size)
 {
 	return ((key*a + b)%prime)%size;
@@ -41,8 +39,6 @@ bool PerfectHash::isPrime(int n)
 	}
 	return true;
 }
-
-
 
 PerfectHash::PerfectHash(vector<unsigned int> array)
 {
@@ -85,14 +81,13 @@ void PerfectHash::createTable()
 		int hashInt = hashValue(arr[i], a, b, prime, arr.size());
 		(hashTable[hashInt]).push_back(arr[i]);
 	}
-	for (unsigned int i = 0; i < arr.size();i++) {
+	for (unsigned int i = 0; i < arr.size(); i++) {
 		vector<unsigned int> temp = hashTable[i];
 		if (temp.size() > 0) {
 			if (temp.size() == 1)hashTable[i] = temp;
 			else {
 				int new_m = (temp.size()) * (temp.size());
 				vector<unsigned int> placeholderVector(new_m);
-				//hashTable[i].clear();
 				hashTable[i].resize(new_m);
 				bool noC = true;
 				while (noC) {
@@ -116,7 +111,7 @@ void PerfectHash::createTable()
 		}
 		else {
 			continue;
-		}	
+		}
 	}
 }
 
@@ -125,7 +120,7 @@ void PerfectHash::printTable()
 	for (int i = 0; i < hashTable.size(); i++) {
 		for (int j = 0; j < hashTable[i].size(); j++) {
 			if (hashTable[i][j] == 0)continue;
-			cout << hashTable[i][j] << " " << i << "-th row" << " " << j << "-th column " << endl;
+			cout << hashTable[i][j] << " " << i+1 << "-th row" << " " << j+1 << "-th column " << endl;
 		}
 	}
 }
