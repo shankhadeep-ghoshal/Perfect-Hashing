@@ -46,16 +46,28 @@ for i =  0 to inputSet.size
 
 
 
+### Usage
+
+* Clone the repository. Navigate to the file **Test.cpp**  
+* Generate a set of keys and put it inside ```std::vector``` collection
+* Create a parameterised constructor with the class name ```PerfectHash``` and the  ```std::vector``` as the parameter
+* Call the ```createTable()``` method on the ```PerfectHash``` object 
+
+
+
+
 ### Results
 ##### Input Set
 { 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 }
 
 ##### Parameters:
+
 * prime : 11
 * a : 8
 * b : 0
 
 ##### Output Set
+
 4: 1-th row 1-th column  </br>
 7: 2-th row 1-th column  </br>
 3: 3-th row 1-th column  </br>
