@@ -14,6 +14,7 @@ ____
 ### Algorithm 
 
 ```
+prime = nearest prime number after the max element of inputSet
 a = Generate a random number between 1 and nearest prime after inputSet.maxElement(exclusive)
 b = Generate a random number between 0 and nearest prime after inputSet.maxElement(exclusive)
 for i = 0 to inputSet.size
@@ -67,7 +68,6 @@ for i =  0 to inputSet.size
 8: 10-th row 1-th column </br>
 
 
----
 
 
 ### Acknowledgements
